@@ -1,7 +1,7 @@
 const shortid = require('shortid')
 const Url = require('../models/url')
 
-class urlController {
+class UrlController {
     async shortenUrl(req,res) {
         const { longUrl } = req.body;
         const baseUrl = process.env.BASE_URL
@@ -36,3 +36,5 @@ class urlController {
         }
       }
 }
+
+module.exports = new UrlController();
